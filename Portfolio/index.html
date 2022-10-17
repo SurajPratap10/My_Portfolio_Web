@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoilio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/52a2915370.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Screenshot 2022-09-25 173507.jpg" class="logo">
+                <ul id="slidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+
+                    <li><a href="#portfolio">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+
+            <div class="header-text">
+                <p>ECE Undergrad</p>
+                <h1>Hi, I'm <span>Suraj</span><br>Pratap from India</h1>
+            </div>
+        </div>
+    </div>
+
+
+<!--------------ABOUT---------------->
+
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column-1">
+                    <img src="images/PP.jpg" alt="">
+                </div>
+                <div class="about-column-2">
+                    <h1 class="title">About Me</h1>
+                    <p>I am Suraj Pratap, currently a Second Year student at VIT Vellore pursuing my B Tech degree in Electrnoics and Communication Engineering. My current CGPA is 9.32 and my interests follows WEB design and development, UI/UX design, AR filters design and learning about new text stacks.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Websites and Webpages Development</li>
+                            <li><span>AR Development</span><br>Building AR designs and filters</li>
+                            <li><span>Open Source</span><br>Contributing to Open Source repositories via Github</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Hacktoberfest - 2022 contributor.</li>
+                            <li><span>2021 - 2022</span><br>ReSkill SparkAR community Hackathon powered by META.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>BTech from VIT Vellore</li>
+                            <li><span>2021</span><br>Class 12th from ST. Michael's High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!------------SERVICES------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="title">My Services</h1>
+        <div class="services-list">
+
+            <div>
+                <i class="fa-sharp fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; user interface design (UI design); authoring, including standardised code and proprietary software; user experience design (UX design); and search engine optimization</p>
+                <a href="https://en.wikipedia.org/wiki/Web_design">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>User experience design (UX design, UXD, UED, or XD) is the process of defining the experience a user would go through when interacting with a digital product or website. Design decisions in UX design are often driven by research, data analysis, and test results rather than aesthetic preferences and opinions.</p>
+                <a href="https://en.wikipedia.org/wiki/User_experience_design">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-vr-cardboard"></i>
+                <h2>AR Design</h2>
+                <p>Augmented reality (AR) is an interactive experience that combines the real world and computer-generated content. The content can span multiple sensory modalities, including visual, auditory, haptic, somatosensory and olfactory.AR can be defined as a system that incorporates three basic features: a combination of real and virtual worlds, real-time interaction, and accurate 3D registration of virtual and real objects.</p>
+                <a href="https://en.wikipedia.org/wiki/Augmented_reality">Learn more</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!---------WORKS---------->
+
+<div id="portfolio">
+
+    <div class="container">
+
+        <h1 class = "title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/w1.jpg">
+                <div class="layer">
+                    <h3>Musicard</h3>
+                    <p>It's a unique and aestehtic music player which lets you listen to songs on the go.</p>
+                    <a href="https://musicard-sp1012.netlify.app/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/w2.png">
+                <div class="layer">
+                    <h3>Ecom Dashboard</h3>
+                    <p>Made for Admin's to keep an eye on the current performance of their Ecom Store.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/w3.jpg">
+                <div class="layer">
+                    <h3>Portfolio</h3>
+                    <p>A personal portfolio website which you are currently looking at.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+
+            <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-----------------CONTACT------------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>surajpratap20002003@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9304107324</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/suraj-pratap-948a92225/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/SurajPratap10"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/aridoshikazu_1/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100075096226121"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+
+
+                            <!---CV Download-->
+                        <a href="images/Resume-Suraj-Pratap (1).pdf" download class="btn btn1">Download CV</a>
+
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name ="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn1">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Suraj. Made with <i class="fa-solid fa-heart"></i> by Suraj Pratap</p>
+        </div>
+    </div>
+
+
+
+<!----------------JS CODE----------------------->
+
+    <script>
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+    </script>
+
+
+
+
+<!--------MENU CLICK FUNCTIONALLITY  (for small screens)----------->
+
+<script>
+
+    var slidemenu = document.getElementById("slidemenu");
+
+    function openmenu(){
+        slidemenu.style.right = "0";
+
+    }
+
+    function closemenu(){
+        slidemenu.style.right = "-200px";
+
+    }
+
+
+
+
+</script>
+
+<!--------GOOGLE  FORM SHEETS VIA CONTACT------------->
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg9P5tCVNK4hH4nBpgdcQVVhj6d2Hcvr_uTlGYbuB54biMRuBM7joUTL_S4LU1qUI2/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully" 
+            setTimeout(function(){
+                
+                msg.innerHTML = ""
+
+            },5000)
+
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+  </script>
+
+</body>
+</html>
