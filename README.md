@@ -8,6 +8,6 @@ c) JS
 
 
 <p align="center">
-  <img src="Portfolio/images/w3.jpg" />
+  <img src="Portfolio/images/w3.jpg"/>
 </p>
 
