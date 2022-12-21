@@ -1,7 +1,7 @@
 # Portfolio_Website_Project2
 This is a pure Front-End based personal PORTFOLIO WEBSITE :)
  
-Text-Stacks used:
+Text-Stacks used:<br>
 a) HTML 
 b) CSS 
 c) JS
