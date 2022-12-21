@@ -2,9 +2,9 @@
 This is a pure Front-End based personal PORTFOLIO WEBSITE :)
  
 Text-Stacks used:<br>
-a) HTML 
-b) CSS 
-c) JS
+a) HTML <br>
+b) CSS <br>
+c) JS <br>
 
 
 <p align="center">
