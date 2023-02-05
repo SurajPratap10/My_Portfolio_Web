@@ -19,6 +19,9 @@ body{
 
     background: #080008;
     color: #fff;
+    background-image: radial-gradient( circle 1224px at 10.6% 50%,  rgb(245, 240, 240) 0%, rgb(96, 120, 255) 100.2% );
+	margin: 0;
+	transition: all 0.2s linear;
   
 }
 
@@ -26,7 +29,7 @@ body{
 
     width: 100%;
     height: 100vh;
-    background-image: url(images/Quotes\ Today.jpg);
+    background-image: url(images/Bg\ \(2\).png);
     background-size: cover;
     background-position: center;
 }
@@ -97,8 +100,11 @@ nav ul li a:hover::after{
     color: #ff004f;
 }
 
-
-
+.new h1{
+    font-size: 40px;
+    margin-top: 20px;
+    
+}
 
 
 
@@ -107,7 +113,7 @@ nav ul li a:hover::after{
 #about{
 
     padding: 80px 0;
-    color: #ababab;
+    color: #ffffff;
 }
 
 .row{
@@ -171,7 +177,7 @@ nav ul li a:hover::after{
     margin: 10px 0;  
 }
 .tab-contents ul li span{
-    color: #b54769;
+    color: #ff004f;
     font-size: 14px;
 }
 
@@ -373,7 +379,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #ffffff;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -427,7 +433,21 @@ form btn1{
     color: #ff004f;
 }
 
-
+/*autotype */
+.textLocation {
+    margin-top: 5em;
+    font-size: 3em;
+  }
+  
+  #autoType {
+    border-right: 2px solid #fff;
+  }
+  
+  .caretAnimation {
+    animation-name: caret;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+  }
 
 
 /*-----------------MEDIA QUERY------------------------------*/
@@ -442,15 +462,20 @@ nav .fa-solid{
     
   
     #header{
-        background-image: url(images/mobile.jpg);
+        background-image: url(images/Untitled\ design\ \(1\).png);
     }
     .header-text{
         margin-top: 100%;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .header-text h1{
-        font-size: 30px;
+        font-size: 29px;
+    }
+
+    .new h1{
+
+        font-size: 26px;
     }
 
     nav .fa-solid{
@@ -519,6 +544,7 @@ nav .fa-solid{
 
         font-size: 14px;
     }
+    
 
 }
 
@@ -531,21 +557,94 @@ nav .fa-solid{
 
 
 
+/* Theme Toggler */
 
 
+body.dark {
+	background-image: linear-gradient( 110.3deg,  #080008 8.8%, rgb(0, 0, 0) 95.1% );
+}
 
+.checkbox {
+	opacity: 0;
+}
 
+.label {
+	background-color: #111;
+    opacity: 70%;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+    margin-left: 90%;
+    margin-bottom: 100px;
+}
 
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
 
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* Down Arrow */
+  .arrows {
+      width: 60px;
+      height: 72px;
+      position: absolute;
+      left: 48%;
+      margin-left: -30px;
+      bottom: 25px;
+  }
+  
+  .arrows path {
+      stroke: #ff004f;
+      fill: transparent;
+      stroke-width: 2px;	
+      animation: arrow 2s infinite;
+      -webkit-animation: arrow 2s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+      animation-delay:-1s;
+      -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+      animation-delay:-0.5s;
+      -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 {	
+      animation-delay:0s;
+      -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
