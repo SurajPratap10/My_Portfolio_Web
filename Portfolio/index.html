@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/Screenshot 2022-09-25 173507.jpg" class="logo">
+                <img src="images/up.jpg" class="logo">
                 <ul id="slidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -20,6 +20,13 @@
 
                     <li><a href="#portfolio">Works</a></li>
                     <li><a href="#contact">Contact</a></li>
+
+                    <!-- Scroll Down arrows -->
+                    <svg class="arrows">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
 
 
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
@@ -30,7 +37,15 @@
 
             <div class="header-text">
                 <p>ECE Undergrad</p>
-                <h1>Hi, I'm <span>Suraj</span><br>Pratap from India</h1>
+                <!-- <h1>Hi, I'm <span>Suraj</span><br>Pratap from India</h1> -->
+                <h1 class="textLocation" >
+                    Hi, I'm  
+                    <span id="autoType">
+                    </span>
+                  </h1>
+            </div>
+            <div class="new">
+                <h1>from INDIA</h1>
             </div>
         </div>
     </div>
@@ -42,7 +57,18 @@
 
     <div id="about">
         <div class="container">
-            <div class="row">
+                              
+                    <!-- Theme Toggler: -->
+
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                    
+
+            <div class="row">             
                 <div class="about-column-1">
                     <img src="images/PP.jpg" alt="">
                 </div>
@@ -126,7 +152,6 @@
 
 
 
-
 <!---------WORKS---------->
 
 <div id="portfolio">
@@ -144,40 +169,40 @@
                         <a href="https://github.com/SurajPratap10/Youtube_Lite"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
+                <div class="work">
+                    <img src="images/w2.jpg">
+                    <div class="layer">
+                        <h3>Google Search Clone</h3>
+                        <p>Google Search Clone , built with the help of React JS , Tailwind CSS , Google Custom Service API , Axios and further more.</p>
+                        <a href="https://github.com/SurajPratap10/Google-Clone-Project5"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/w3.png">
+                    <div class="layer">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website which you are currently looking at.</p>
+                        <a href="https://github.com/SurajPratap10/Portfolio_Website_Project2"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/w5.jpg">
+                    <div class="layer">
+                        <h3>CoinMeter</h3>
+                        <p>CoinMeter is a completely responsive and functional real-time Cryptocurrency data fetching app. 
+                        This app gives you the facility to analyze the top cryptocurrencies across the world and see their real-time 
+                        market cap and exchanges with the help of a properly designed historical chart for each coin with a clean UI experience.
+                        It also has a trending section where the last 24 hours trending coins are shown.
+                    </p>
+                        <a href="https://github.com/SurajPratap10/CoinMeter_Project6"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
                 <div class="work">          
                 <img src="images/w1.jpg">
                 <div class="layer">
                     <h3>Musicard</h3>
                     <p>It's a unique and aestehtic music player which lets you listen to songs on the go.</p>
                     <a href="https://github.com/SurajPratap10/MusiCard_Project1"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/w2.png">
-                <div class="layer">
-                    <h3>Google Search Clone</h3>
-                    <p>Google Search Clone , built with the help of React JS , Tailwind CSS , Google Custom Service API , Axios and further more.</p>
-                    <a href="https://github.com/SurajPratap10/Google-Clone-Project5"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/w3.jpg">
-                <div class="layer">
-                    <h3>Portfolio</h3>
-                    <p>A personal portfolio website which you are currently looking at.</p>
-                    <a href="https://github.com/SurajPratap10/Portfolio_Website_Project2"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/w5.jpg">
-                <div class="layer">
-                    <h3>CoinMeter</h3>
-                    <p>CoinMeter is a completely responsive and functional real-time Cryptocurrency data fetching app. 
-                    This app gives you the facility to analyze the top cryptocurrencies across the world and see their real-time 
-                    market cap and exchanges with the help of a properly designed historical chart for each coin with a clean UI experience.
-                    It also has a trending section where the last 24 hours trending coins are shown.
-                </p>
-                    <a href="https://github.com/SurajPratap10/CoinMeter_Project6"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -202,7 +227,7 @@
                 </div>
             </div>      
             <div class="work">
-                <img src="images/w4.png">
+                <img src="images/w4.jpg">
                 <div class="layer">
                     <h3>WordHive</h3>
                     <p> A custom-made Dictionary App which provides not only the meaning of
