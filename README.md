@@ -1,5 +1,5 @@
-# Portfolio_Website_Project2
-This is my PORTFOLIO WEBSITE :)
+# Portfolio Website
+This is my Portfolio Website :)
  
 ## Technologies Used:
 
