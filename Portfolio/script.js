@@ -95,7 +95,7 @@ function addLetter() {
   letterIndex += 1;
   
   if(letterIndex > data.length) {
-    autoType.className = "caretAnimation";
+    autoType.className = "createAnimation";
     window.clearInterval(currentInterval);
     window.setTimeout(startRemove, pause);
   };
@@ -121,13 +121,14 @@ window.onload = window.setTimeout(textRotation, 500);
 
 
 
-// Theme Toggler
+// Theme Toggler:
 
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
 });
+
 
 
 // Timeline Functionality:
@@ -138,11 +139,7 @@ chk.addEventListener('change', () => {
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) * 0.5
     );
   }
 
@@ -154,11 +151,43 @@ chk.addEventListener('change', () => {
     }
   }
 
-  // event listeners
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
+  // listen for scroll event
   window.addEventListener("scroll", callbackFunc);
 })();
 
 
 
+// BACK TO TOP ARROW BUTTON:
+
+const upArrowBtn = document.getElementById("up-arrow-btn");
+
+// Show or hide the up arrow button based on scroll position
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 500) {
+    upArrowBtn.style.display = "block";
+  } else {
+    upArrowBtn.style.display = "none";
+  }
+});
+
+// Scroll to the top of the page when the up arrow button is clicked
+upArrowBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+var arrowBtn = document.getElementById("up-arrow-btn");
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+arrowBtn.addEventListener("click", function () {
+  arrowBtn.classList.add("loading");
+  setTimeout(function () {
+    arrowBtn.classList.remove("loading");
+  }, 2000);
+  scrollToTop();
+});
