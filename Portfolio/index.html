@@ -7,29 +7,39 @@
     <title>Portfoilio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/52a2915370.js" crossorigin="anonymous"></script>
+
+    <!-- Three.JS -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
 </head>
 <body> 
     <div id="header">
+
+          <!-- Three.JS -->
+    <!-- <model-viewer src="./pc/scene.gltf" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+    </model-viewer> -->
+        <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+        </script>
+
         <div class="container">
             <nav>
-                <img src="images/up.jpg" class="logo">
+                <img src="images/up.jpg" class="logoe">
+              
                 <ul id="slidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Domains</a></li>
 
-                    <li><a href="#portfolio">Works</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <!-- <li><a href="#blogs"></a>Blogs</li> -->
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
 
-                    <!-- Scroll Down arrows -->
-                    <svg class="arrows">
-							<path class="a1" d="M0 0 L30 32 L60 0"></path>
-							<path class="a2" d="M0 20 L30 52 L60 20"></path>
-							<path class="a3" d="M0 40 L30 72 L60 40"></path>
-						</svg>
+                    <!-- Scroll Down-->
+            <div class="mouse"></div>
+            <p class="text">Scroll Down</p>
 
-
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
@@ -48,25 +58,27 @@
             </div>
         </div>
     </div>
+          
 
+    
 
 <!--------------ABOUT---------------->
-
-
-
+      <div class="logo">
+          <span>SP</span>
+      </div>
     <div id="about">
-        <div class="container">
+
+<div class="container">
                               
-                    <!-- Theme Toggler: -->
+      <!-- Theme Toggler: -->
 
-                    <div>
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                    
-
+      <div>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+              <div class="ball"></div>
+          </label>
+      </div>
+          
             <div class="row">             
                 <div class="about-column-1">
                     <img src="images/PP.jpg" alt="">
@@ -81,39 +93,33 @@
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                        <section class="intro">
-                            <div class="container">
-                              <h2>Scroll Down &darr;</h2>
-                            </div>
-                          </section>
-                          
-                          <section class="timeline">
-                            <ul>
-                              <li>
+                      <section class="intro">
+                        <div class="container">
+                          <h2>Scroll Down &darr;</h2>
+                        </div>
+                      </section>
+                      
+                      <section class="timeline">
+                        <ul>
+                          <li>
                                 <div>
-                                  <time><h2>Programming</h2><br><br></time><h3>Languages:</h3></time><br><h4>• Java • Python  • C++  • Javascript  • HTML  • CSS<br>
+                                  <time><h2>Programming</h2><br><br></time><h3>Languages:</h3></time><br><h4>HTML, CSS, Javascript,  Java, Python,  C++<br>
 
-                                    <br><br><h3>Tool and Technologies:</h3><br><h4>• Git • Github • Windows • Postman
-                                    • Intelli J • Verilog • VS Code • LATEX • Adobe Photoshop</h4><br>
+                                    <br><br><h3>Tool and Technologies:</h3><br><h4> Git, Github, Windows, Postman,
+                                    Intelli J, Verilog, VS Code, LATEX, Photoshop</h4><br>
 
-                                    <br><h3>Frameworks and Libraries:</h3><br><h4>• React JS • Tailwind CSS
-                                    • jQuery • Node JS <br>• Express JS</h4>
+                                    <br><h3>Frameworks and Libraries:</h3><br><h4>React JS, Tailwind CSS,
+                                    JQuery, Node JS, Bootstrap, Express JS</h4>
                                     
                                 </div>
                               </li>
                               <li>
                                 <div>
-                                  <time><h2>Others</h2><br></time><h4>
-                                • Digital Painting
-                                • Football
-                                • Chess
-                                • Reading<br>
-                                • Teaching
-                                • Music
-                                • Video Games
-                                • Blogs</h4>
+                                  <time><h2>Others</h2><br></time><h4>Blogs, Football, Chess, Reading,
+                                Music, Video Games, Digital Painting</h4>
                                 </div>
                               </li>
+                              
                     </div>
                     <div class="tab-contents" id="experience">
                         <section class="intro">
@@ -124,47 +130,161 @@
                           
                           <section class="timeline">
                             <ul>
+                            <li>
+                                <div>
+                                  <time><h2>March - April | 2023</h2><br><br>Web Developer | LetsGrowMore | Internship </time><br>As a web developer intern at LetsGrowMore, I will be responsible for completing various projects during my internship. These projects will be designed to enhance my skills and understanding of web development, while also providing value to the company and its users.<br>
+
+                                  <br>Throughout my internship, I will be communicating with senior mentors who will provide guidance and feedback on my work. These mentors will have extensive experience in the industry and will be able to provide valuable insights into best practices and emerging trends in web development.<br>
+                                  
+                                  <br>Overall, my experience as a web development intern at LetsGrowMore will provide me with a well-rounded understanding of the field, and prepare me for a successful career as a web developer.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • Full-Stack Development<br>
+                                  • GitHub<br>
+                              </div>
+                                </li>
+                                <li>
+                                  <div>
+                                    <time><h2>March | 2023</h2><br><br>STEM Connect Virtual Experience Program | Deloitte | Internship </time><br>Deloitte STEM Connect is a virtual internship program offered by Deloitte, one of the world's largest professional services firms. The program is designed to provide students with a unique opportunity to explore careers in science, technology, engineering, and mathematics (STEM) through virtual learning and hands-on experience.<br> 
+
+                                    <br><h4>Achievements:</h4><br>
+                                    • Completed 5 tasks on Agile Software Development.<br>
+                                    • Accomplished the requirements expected in each of the tasks.<br>
+                                    • Recieved the completion certificate<br>
+                                    
+                                    <br><h4>Skills:</h4><br>
+                                    • Web Development<br>
+                                    • Data Analysis<br>
+                                    • Cybersecurity<br>
+                                    • Programming<br>
+                                    • Forensic Analysis<br>
+                                </div>
+                                  </li>
+                                <li>
+                                  <div>
+                                    <time><h2>March | 2023</h2><br><br> Global Hack Week - Social Good | Major League Hacking | Apprenticeship</time><br>MLH (Major League Hacking) Global Hackweek for Social Good is a global event where hackers, developers, and tech enthusiasts come together to create innovative solutions to tackle real-world social problems. The event is organized by Major League Hacking, a company that provides a platform for hackathons and coding competitions worldwide.<br>
+
+                                    <br>The event aims to promote social impact and encourage participants to use their technical skills for the greater good. At the end of the hackweek, projects are judged based on their impact, creativity, and technical execution, and winning teams are awarded prizes.<br>
+                                    <br><h4>Achievements:</h4><br>
+                                    • I ended up in the Top - 5% of hackers across the globe! It is an honor to have been recognized for my hard work and dedication towards creating innovative solutions for social good.<br>
+                                    • To add to my excitement, I also won some fantastic swags and bonus swags for my performance.<br>
+                                    <br><h4>Skills:</h4><br>
+                                    • Open-Source Development<br>
+                                    • GitHub<br>
+                                    • Augmented Reality (AR)<br>
+                                    • Community Engagement<br>
+                                    • Web Development<br>
+                                  </div>
+                                </li>
                               <li>
                                 <div>
-                                  <time><h2>February - 2023</h2><br><br> Diversion 2k23 | Major League Hacking | Open Source Contributor</time><br>Diversion 2K23, powered by Major League Hacking (MLH), is one of India's largest hackathons.<br>
+                                  <time><h2>January - April | 2023</h2><br><br>Mentee • Winter of Blockchain  | HyperEdge @GSSOC | Internship </time><br>Winter of Blockchain is a 3-month long open source 
+                                  contribution program for contributing to Blockchains and Blockchain related projects like Blockchain Games, Protocols, Community Platforms, DeFi and other Services and 
+                                  Products.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • Blockchain<br>
+                                  • Web3.0<br>
+                                  • Open-Source Development<br>
+                                </div>
+                              </li>
+                              <li>
+                                <div>
+                                  <time><h2>February | 2023</h2><br><br> DUHacks 2.0 | Hackathon</time><br>DUHacks is a 36-hour National-Level hybrid hackathon organized by Google Developer Student Club, DDU in which all participants can sharpen their skills and connect with people to grow together.<br> 
+                                  <br>The hackathon is designed to spark innovation, attract and educate new talent and create new channels for collaboration between performance and capacity professionals.<br>
+                                  <br><h4>Achievements:</h4><br>
+                                    • I successfully completed the hackathon and submitted a Web-Development base project on Devfolio following all the submission guidelines and procedures.<br>
+                                    • In the end, I also received a certificate of excellence for my successful contribution.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • GitHub<br>
+                                  • Open-Source Development<br>
+                                  • Web Development<br>
+                                </div>
+                              </li>
+                              <li>
+                                <div>
+                                  <time><h2>February - #present | 2023</h2><br><br> EddieHub Community | Open Source Contributor</time><br>EddieHub is an Open Source community aimed at encouraging and promoting communication, best practices and technical expertise in an inclusive and welcoming environment.<br>
+                                  <br>
+                                  Community of inclusive Open Source people - Collaboration 1st, Code 2nd! <br>
+                                  <br>
+                                  Website - https://www.eddiehub.org<br>
+                                  GitHub - http://github.eddiehub.org/<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • GitHub<br>
+                                  • Open-Source Development<br>
+                                  • Web Development<br>
+                                  • Community Development<br>
+                                </div>
+                              </li>
+                              <li>
+                                <div>
+                                  <time><h2>February | 2023</h2><br><br> Diversion 2k23 | Major League Hacking | Open Source Contributor</time><br>Diversion 2K23, powered by Major League Hacking (MLH), is one of India's largest hackathons.<br>
                                   As a selected open-source contributor, my role was likely to involve contributing to open-source projects and helping to maintain them during the hackathon event. <br>This included fixing bugs, adding new features, or improving documentation. I will have the opportunity to collaborate with other contributors, network with industry professionals, and gain experience working with open-source projects.<br>
-                                  <br><h4>Achievements:</h4>
-                                  • Fixed 2 bugs in (the open-source project I chose) Embellish's official website while working during this 
+                                  <br><h4>Achievements:</h4><br>
+                                  • WINNER (Top Contributor) of this Open - Source phase and was recognized in the Top 20 out of all participating contributors.<br>
+                                  •  Helped Embellish (the open-source project I chose) in winning the event and achieving 2nd rank out of all
+                                    projects. <br>
+                                  • Fixed 2 bugs on Embellish's official website while working during this 
                                    open-source event.<br>
                                   • Added 10+ new components via PR's to various sections of the Embellish GitHub repository.<br>
                                   • Successfully merged 13 Pull Requests.<br>
                                   • I was the overall TOP contributor for this project during this open-source event.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • GitHub<br>
+                                  • Open-Source Development<br>
+                                  • Front-End Development<br>
+                                  • Community Development<br>
                                 </div>
                               </li>
                               <li>
                                 <div>
-                                  <time><h2>January - 2023</h2><br><br> HackNITR 4.0 | Major League Hacking | Hackathon</time><br> HackNITR is one of India's largest student-run hackathons which is yearly organized by NIT Rourkela. Unlike every year this year also had many big sponsors like MLH, Devfolio, and Polygon of which the main sponsor was MLH. 
+                                  <time><h2>February - #present | 2023</h2><br><br>Blog Contributor | WeMakeDevs | Open Source </time><br>As a developer and blogger at WeMakeDevs, I create content that promotes open source technology and real-world applications. Through my writing, 
+                                  I share my expertise and insights with the tech community, inspiring others to explore and innovate in the field.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • Open-Source<br>
+                                  • Blogging<br>
+                                  • Web Development<br>
+                                  • Tools and Technologies<br>
+                                </div>
+                              </li>
+                              <li>
+                                <div>
+                                  <time><h2>January | 2023</h2><br><br> HackNITR 4.0 | Major League Hacking | Hackathon</time><br> HackNITR is one of India's largest student-run hackathons which is yearly organized by NIT Rourkela. Unlike every year this year also had many big sponsors like MLH, Devfolio, and Polygon of which the main sponsor was MLH. 
                                 
                                   <br>
-                                  <br>I participated in the hackathon and successfully developed an AI Image Generation project with the help of the in demand Open AI api library in a span of 36 hours and published the same on Devfolio and Github during Round 1. Will be receiving swags and goodies for the same in the future once Round 2 of the hackathon gets completed.
+                                  <br>I participated in the hackathon and successfully developed an AI Image Generation project with the help of the in demand Open AI api library in a span of 36 hours and published the same on Devfolio and Github during Round 1. Will be receiving swags and goodies for the same in the future once Round 2 of the hackathon gets completed.<br>
+                                  <br><h4>Skills:</h4><br>
+                                  • GitHub<br>
+                                  • Open-Source Development<br>
+                                  • Full-Stack Development<br>
                                 </div>
                               </li>
                               <li>
                                 <div>
-                                  <time><h2>January - 2023</h2><br><br> VinHack 2023 | VinnovateIT </time><br> Vinhack is one of a kind hackathon conducted by VinnovateIT every year to encourage tech enthusiasts from across the country to develop their ideas for the future. Here participants come together and find creative solutions for given problem statements based on the current social obstacles. It is a 36-hour hybrid hackathon where 500+ participants participated this year. 
+                                  <time><h2>January | 2023</h2><br><br> VinHack 2023 | VinnovateIT </time><br> Vinhack is one of a kind hackathon conducted by VinnovateIT every year to encourage tech enthusiasts from across the country to develop their ideas for the future. Here participants come together and find creative solutions for given problem statements based on the current social obstacles. It is a 36-hour hybrid hackathon where 500+ participants participated this year. 
                                   <br>
                                   <br>I got shortlisted for the Final Pitching round of the hackathon and was on the list of the Top - 22 of shortlisted ones.
+                                  <br><h4>Skills:</h4><br>
+                                  • GitHub<br>
+                                  • Open-Source Development<br>
+                                  • Web Development<br>
                                 </div>
                               </li>
                               <li>
                                   <div>
-                                      <time><h2>( January - November ) - 2022 </h2> <br><br> Spark AR leARn Initiative and Spark AR by META | Reskill | Hackathon</time><br> Participated in the Spark AR leARn Initiative Hackathon. It was an open innovation challenge hackathon.<br>
+                                      <time><h2>January - November | 2022 </h2> <br><br> Spark AR leARn Initiative and Spark AR by META | Reskill | Hackathon</time><br> Participated in the Spark AR leARn Initiative Hackathon. It was an open innovation challenge hackathon.<br>
                                       Open Innovation Challenge is an online hackathon by Reskilll in collaboration with Spark AR, inviting students, developers, tech enthusiasts to learn about Spark AR Studio and utilise it's tools to create their assets that are innovative, value creating and have a wider impact on the audience.<br>
                                       <br>
                                       • Got familiar with Meta spark AR studio software for developing AR filters.<br>
                                       • Built an AR game and many AR filters in the Meta spark AR studio within the given time for the hackathon.<br>
                                       • Successfully built, demonstrated and hosted the AR game and filters on platforms like Facebook and Instagram.<br>
+                                      <br><h4>Skills:</h4><br>
+                                      • Meta Spark Studio<br>
+                                      • Open-Source Development<br>
                                       <br>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <time><h2>Novemeber - 2022 </h2> <br><br> Moreficent APP-A-THON | Hackathon</time><br> Moreficent helps to improve the learning outcomes of students by providing a professional-grade programming environment running on good hardware.
+                                        <time><h2>Novemeber | 2022 </h2> <br><br> Moreficent APP-A-THON | Hackathon</time><br> Moreficent helps to improve the learning outcomes of students by providing a professional-grade programming environment running on good hardware.
                                         <br>  
                                         It runs standard desktop applications, like Android Studio, in the cloud and stream the user interface to the browser. Through a combination of advances in algorithms and the adoption of cutting-edge standards, we are able to make the remote application feel as responsive as the one running locally.
                                         <br>
@@ -172,42 +292,25 @@
                                         • Worked on building an Android App using Moreficent platform.<br> 
                                         • Built a Quiz App using Android Studio on the cloud which was possible because of Moreficent platform. <br>
                                         • Got aware of running standard desktop applications, like Android Studio, in the cloud and stream the user interface to the browser.<br>
+                                        <br><h4>Skills:</h4><br>
+                                        • Android Studio<br>
                                     </div>
                                 </li>
                                 <li>
                                   <div>
-                                    <time><h2>October - 2022 </h2> <br><br> Hacktoberfest 2022 | Digital Ocean | Open Source Contributor</time><br>Hacktoberfest is a yearly event to encourage people to contribute to open source in the month of October. In Hacktoberfest 2022 some top contributors were eligible for the swags including me this time.<br>
+                                    <time><h2>October | 2022 </h2> <br><br> Hacktoberfest 2022 | Digital Ocean | Open Source Contributor</time><br>Hacktoberfest is a yearly event to encourage people to contribute to open source in the month of October. In Hacktoberfest 2022 some top contributors were eligible for the swags including me this time.<br>
                                     <br>
                                     • I was an active open-source contributor.
                                     <br>
                                     • Worked on many open-source repositories during this open source event.
                                     <br>
                                     • Managed to get 4 successful pullrequests from the maintainers of the open-source repositories and merged them on GitHub
+                                    <br><h4>Skills:</h4><br>
+                                    • GitHub<br>
+                                    • Open-Source Development<br>
+                                    • Web Development<br>
                                   </div>
                                 </li>
-
-                              <!-- //Extra for FUTURE use :) -->
-
-                              <!-- <li>
-                                <div>
-                                  <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                                </div>
-                              </li>
-                              <li>
-                                <div>
-                                  <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
-                                </div>
-                              </li>
-                              <li>
-                                <div>
-                                  <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
-                                </div>
-                              </li>
-                              <li>
-                                <div>
-                                  <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                                </div>
-                              </li> -->
                             </ul>
                           </section>
                     </div>
@@ -221,7 +324,7 @@
                             <ul>
                               <li>
                                 <div>
-                                  <time><h2> 2021 - 2025 </h2><br><br>Vellore Institute of Technology | Vellore Campus | B.Tech | Electronics and Communication Engineering</time><br><h4>B.tech Year: 2nd year <br> Semester : 4th semester <br> CGPA : 9.10</h4>
+                                  <time><h2> 2021 - 2025 </h2><br><br>Vellore Institute of Technology | Vellore Campus | B.Tech | Electronics and Communication Engineering</time><br><h4>-- As of 16-02-2023 --</h4><br><h4>B.Tech Year: 2nd year <br> Semester : 4th semester <br> CGPA : 9.10</h4><br>
                                 </div>
                               </li>
                               <li>
@@ -239,11 +342,11 @@
 
 
 
-<!------------SERVICES------------->
+<!------------EXPERTISE------------->
 
 <div id="services">
     <div class="container">
-        <h1 class="title">My Expertise</h1>
+        <h1 class="title">My Domains</h1>
         <div class="services-list">
 
             <div>
@@ -261,10 +364,10 @@
             </div>
 
             <div>
-                <i class="fa-solid fa-vr-cardboard"></i>
-                <h2>AR Design</h2>
-                <p>Augmented reality (AR) is an interactive experience that combines the real world and computer-generated content. The content can span multiple sensory modalities, including visual, auditory, haptic, somatosensory and olfactory.AR can be defined as a system that incorporates three basic features: a combination of real and virtual worlds, real-time interaction, and accurate 3D registration of virtual and real objects.</p>
-                <a href="https://en.wikipedia.org/wiki/Augmented_reality">Learn more</a>
+                <i class="fa-sharp fa-solid fa-blog"></i>
+                <h2>Blogging</h2>
+                <p>Blogging refers to writing, photography, and other media that's self-published online. Blogging started as an opportunity for individuals to write diary-style entries, but it has since been incorporated into websites for many businesses. The hallmarks of blogging include frequent updates, informal language, and opportunities for readers to engage and start a conversation.</p>
+                <a href="https://www.thebalancemoney.com/blogging-what-is-it-1794405">Learn more</a>
             </div>
 
 
@@ -273,16 +376,13 @@
 </div>
 
 
-
-
-
 <!---------WORKS---------->
 
 <div id="portfolio">
 
     <div class="container">
 
-        <h1 class = "title">My Works</h1>
+        <h1 class = "title">My Projects</h1>
         <div class="work-list">
             <div class="work">
                 <img src="images/w9.png">
@@ -333,15 +433,15 @@
                         <a href="https://github.com/SurajPratap10/CoinMeter_Project6"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-                <div class="work">          
+                <!-- <div class="work">          
                 <img src="images/w1.jpg">
                 <div class="layer">
                     <h3>Musicard</h3>
                     <p>It's a unique and aestehtic music player which lets you listen to songs on the go.</p>
                     <a href="https://github.com/SurajPratap10/MusiCard_Project1"><i class="fa-solid fa-link"></i></a>
                 </div>
-            </div>
-            <!-- <div class="work">
+            </div> -->
+            <div class="work">
                 <img src="images/w7.png">
                 <div class="layer">
                     <h3>IMAGINE - AI</h3>
@@ -351,25 +451,24 @@
                 </p>
                     <a href="https://github.com/SurajPratap10/Imagine_AI"><i class="fa-solid fa-link"></i></a>
                 </div>
-            </div> -->
+            </div>
+            <div class="work">
+                <img src="images/w11.png">
+                <div class="layer">
+                    <h3>Remindify</h3>
+                    <p>Remindify is a MERN stack app that can easily add tasks and their deadlines to ensure that you stay on top of your to-do list. Once you've added a task, our app will automatically send you a WhatsApp message at the specified time to remind you of what you need to do.
+                      It uses Twilio, a trusted messaging platform, to ensure that you receive your reminders reliably and on time.
+                </p>
+                    <a href="https://github.com/SurajPratap10/Remindify"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>      
             <div class="work">
                 <img src="images/w6.jpg">
                 <div class="layer">
                     <h3>Nemo</h3>
-                    <p>Nemo is an AI Bot with an elegant user interface that resembles the ChatGPT app, communicating with advanced GPT3 model API. 
-                    It returns the most logical textual data on the given question be it any question related to personal life or coding..
-                </p>
-                    <a href="https://github.com/SurajPratap10/Nemo_Project7"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>      
-            <div class="work">
-                <img src="images/w4.jpg">
-                <div class="layer">
-                    <h3>WordHive</h3>
-                    <p> A custom-made Dictionary App which provides not only the meaning of
-                        the word but its synonyms, antonyms, and its use in a given sentence
-                        through examples.It's built with the help of Axios API, React JS and Tailwind.</p>
-                    <a href="https://github.com/SurajPratap10/Dictionary_Project4"><i class="fa-solid fa-link"></i></a>
+                    <p> Nemo is an AI Bot with an elegant user interface that resembles the ChatGPT app, communicating with advanced GPT3 model API. It returns the most logical 
+                      textual data on the given question be it any question related to personal life or coding.</p>
+                    <a href="https://github.com/SurajPratap10/Nemo"><i class="fa-solid fa-link"></i></a>
                 </div>
                          
         </div>
@@ -378,9 +477,58 @@
         
         <a href="https://github.com/SurajPratap10?tab=repositories" class="btn">See more</a>
 
+        
 
-    </div>
-</div>
+        <!-- TESTIMONIAL -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="testimonials"></div>
+
+        <h1 class = "title">Testimonials</h1><br>
+        <section class="pn_reviews my-5">
+                  <div class="col-md-12 col-lg-4">
+                      <div class="pn_testimonial_box mt-4">
+                        <i class="fas fa-quote-left" aria-hidden="true" ></i>
+                          <p class="text-justify">Suraj is a very innovative person. He contributed new components to my project Embellish during Diversion2023. He followed all the open source norms and used to come up with new innovations. He also was active throughout the program and gave his best.
+      </p>
+      <br>
+                          <div class="row pt-3">
+                              <div class="col-md-6 pn_review_profile"><img src="images/profie1.png" 
+                                class="border-radius-12 float-right" alt="client image" /> <span><h5> - Siddhi Bhanushali <br> Software Engineer </h5></span> </div>
+                              <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img class="image-radius aligncenter" src="https://desklib.com/static/src/assets/images/v2/star_rating.svg" alt="client stars image" /> </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                      <div class="pn_testimonial_box mt-4">
+                        <i class="fas fa-quote-left" aria-hidden="true" ></i>
+                          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maxime quae ut sequi aperiam ratione fugiat laboriosam recusandae perferendis quos at, eaque, assumenda earum. Id natus culpa placeat blanditiis iusto!
+      </p>
+      <br>
+                          <div class="row pt-3">
+                              <div class="col-md-6 pn_review_profile"><img src="https://desklib.com/static/src/assets/images/v2/profile_2.svg" class="border-radius-12 float-right" alt="client image" /> <span><h5> - Angelina <br> Web Developer </h5></span> </div>
+                              <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img class="image-radius aligncenter" src="https://desklib.com/static/src/assets/images/v2/star_rating.svg" alt="client stars image" /> </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                      <div class="pn_testimonial_box mt-4">
+                        <i class="fas fa-quote-left" aria-hidden="true" ></i>
+                          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita reiciendis, excepturi mollitia et laboriosam inventore ipsum dolores aut? Dicta facere corrupti delectus illum labore expedita iure itaque ad rem distinctio.
+       </p>
+       <br>
+                          <div class="row pt-3">
+                              <div class="col-md-6 pn_review_profile"><img src="https://desklib.com/static/src/assets/images/v2/profile_3.svg" class="border-radius-12 float-right" alt="client image" /> <span> <h5> - Ryan Reckons <br> Data Scientist </h5></span> </div>
+                              <div class="col-md-6 pn_review_rating d-flex justify-content-end"> 5 &nbsp; <img class="image-radius aligncenter" src="https://desklib.com/static/src/assets/images/v2/star_rating.svg" alt="stars image" /> </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
 
 <!-----------------CONTACT------------------>
 
@@ -389,20 +537,20 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>surajpratap20002003@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope"></i>surajpratap20002003@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>9304107324</p>
 
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/suraj-pratap-948a92225/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/SurajPratap10"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://hashnode.com/@SurajPratap10"><i class="fa-brands fa-hashnode"></i></a>
                         <a href="https://www.instagram.com/aridoshikazu_1/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=100075096226121"><i class="fa-brands fa-facebook"></i></a>
                     </div>
 
 
                             <!---CV Download-->
-                        <a href="images/My Resume.pdf" download class="btn btn1">Download CV</a>
-
+                        <a href="images/Resume.pdf" download class="btn btn1">Download CV</a>
 
                 </div>
                 <div class="contact-right">
@@ -416,6 +564,23 @@
                 </div>
             </div>
         </div>
+        
+      <!-- <div class="up-arrow-container">
+        <button id="up-arrow-btn">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div> -->
+
+      <div class="up-arrow-container">
+        <button id="up-arrow-btn" aria-label="Back to top">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+          </span>
+        </button>
+      </div>
+      
+
         <div class="copyright">
             <p>Copyright © Suraj. Made with <i class="fa-solid fa-heart"></i> by Suraj Pratap</p>
         </div>
@@ -428,6 +593,7 @@
 
 
 <!--JS FILE-->
+
 
 
     <script src="script.js"></script>
