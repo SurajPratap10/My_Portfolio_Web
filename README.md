@@ -8,9 +8,9 @@ b) CSS <br>
 c) Javascript <br>
 d) Netlify <br>
 
-## Mockup
+## Mockup:
 <p align="center">
   <img src="Portfolio/images/w3.png"/>
 </p>
-
+## Link to my Portfolio Website:
 <h4> Live Site: https://suraj-portfolio-d12000.netlify.app/
