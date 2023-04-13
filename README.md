@@ -5,7 +5,7 @@ This is my Portfolio Website :)
 
 a) HTML <br>
 b) CSS <br>
-c) JS <br>
+c) Javascript <br>
 d) Netlify <br>
 
 
