@@ -1,5 +1,5 @@
 # Portfolio Website
-This is my Portfolio Website :)
+Know me better :)
  
 ## Technologies Used:
 
@@ -12,5 +12,5 @@ d) Netlify <br>
 <p align="center">
   <img src="Portfolio/images/w3.png"/>
 </p>
-## Link to my Portfolio Website:
+<h2> Link to my Portfolio Website:
 <h4> Live Site: https://suraj-portfolio-d12000.netlify.app/
