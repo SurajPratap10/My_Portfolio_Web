@@ -7,10 +7,16 @@
     <title>Portfoilio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/52a2915370.js" crossorigin="anonymous"></script>
+
+    <!-- Three.JS -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
 </head>
 <body> 
     <div id="header">
 
+    <!-- Three.JS -->
+    <!-- <model-viewer src="./pc/scene.gltf" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+    </model-viewer> -->
         <script type="module"
           src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
         </script>
@@ -25,7 +31,7 @@
                     <li><a href="#services">Domains</a></li>
 
                     <li><a href="#portfolio">Projects</a></li>
-                    <!-- <li><a href="#blogs"></a>Blogs</li> -->
+                    <li><a href="#blog">Blogs</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
 
@@ -33,6 +39,7 @@
             <div class="mouse"></div>
             <p class="text">Scroll Down</p>
 
+            
                 <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -57,9 +64,9 @@
     
 
 <!--------------ABOUT---------------->
-      <div class="logo">
-          <span>SP</span>
-      </div>
+
+      <div class="logo"><span>SP</span></div>
+
     <div id="about">
 
 <div class="container">
@@ -124,13 +131,31 @@
                           
                           <section class="timeline">
                             <ul>
+                              <li>
+                                <div>
+                                  <time><h2>April - May | 2023</h2><br><br>Web Developer | CodeClause | Internship </time><br>During my web development internship at Codeclause, I will be working on a diverse range of web development projects to sharpen my skills in HTML, CSS, JavaScript, and other web technologies. I am excited to collaborate with the talented team of developers and learn from their vast experience in the field.<br>
+
+                                  <br>Throughout my internship, I will strive to contribute innovative solutions to the projects assigned to me while learning from my mentors. At the end of the internship, I will receive a certificate and letter of recommendation from Codeclause, which will serve as a testament to my dedication and hard work during this period. I am eager to take on this challenge and begin my journey as a web developer with Codeclause.<br>
+                                  
+                                  <!-- <br><h4>Achievements:</h4><br>
+                                  • Worked on a range of projects such as making Portals, APIs and Management systems using Full Stack Technologies.<br>
+                                  • Completed 4 projects and was awarded the Letter of Recommendation.<br> -->
+                                                              
+                                  <br><h4>Skills:</h4><br>
+                                  • Full-Stack Development<br>
+                                  • GitHub<br>
+                              </div>
+                                </li>
                             <li>
                                 <div>
-                                  <time><h2>March - April | 2023</h2><br><br>Web Developer | LetsGrowMore | Internship </time><br>As a web developer intern at LetsGrowMore, I will be responsible for completing various projects during my internship. These projects will be designed to enhance my skills and understanding of web development, while also providing value to the company and its users.<br>
+                                  <time><h2>March - April | 2023</h2><br><br>Web Developer | LetsGrowMore | Internship </time><br>As a web developer intern at LetsGrowMore, I completed various projects during my internship period. These projects were designed to enhance my skills and understanding of web development.<br>
 
-                                  <br>Throughout my internship, I will be communicating with senior mentors who will provide guidance and feedback on my work. These mentors will have extensive experience in the industry and will be able to provide valuable insights into best practices and emerging trends in web development.<br>
+                                  <br>Throughout my internship, I communicated with senior mentors who provided guidance and feedback on my work. These mentors had extensive experience in the industry and provided valuable insights into best practices and emerging trends in web development.<br>
                                   
-                                  <br>Overall, my experience as a web development intern at LetsGrowMore will provide me with a well-rounded understanding of the field, and prepare me for a successful career as a web developer.<br>
+                                  <br><h4>Achievements:</h4><br>
+                                  • Worked on a range of projects such as making Portals, APIs and Management systems using Full Stack Technologies.<br>
+                                  • Completed 4 projects and was awarded the Letter of Recommendation for my excellent performance.<br>
+                                                              
                                   <br><h4>Skills:</h4><br>
                                   • Full-Stack Development<br>
                                   • GitHub<br>
@@ -340,7 +365,6 @@
 
 <div id="services">
     <div class="container">
-        
         <h1 class="title">My Domains</h1>
         <div class="services-list">
 
@@ -374,6 +398,7 @@
 <!---------WORKS---------->
 
 <div id="portfolio">
+
     <div class="container">
 
         <h1 class = "title">My Projects</h1>
@@ -467,11 +492,55 @@
                          
         </div>
     </div>
-
         
         <a href="https://github.com/SurajPratap10?tab=repositories" class="btn">See more</a>
 
+
+
+
+
         
+
+
+          <!-- BLOGS -->
+
+          <div id="blog">
+
+          <section class="blog">
+            <h1 class = "title">My Blogs</h1>
+            <br>
+            <div class="blog-grid">
+              <div class="blog-post">
+                <img src="images/aa.avif" alt="Blog Post Image">
+                <div class="blog-info">
+                  <h3 class="blog-title">A Beginner's Guide to Open-Source: Git and GitHub</h3>
+                  <a href="https://developer1012.hashnode.dev/a-beginners-guide-to-open-source-github" class="btn2">Read More</a>
+                </div>
+              </div>
+              <div class="blog-post">
+                <img src="images/dd.png" alt="Blog Post Image">
+                <div class="blog-info">
+                  <h3 class="blog-title">Exploring the Power of React JS ⚛️: Benefits, Features, and Use Cases</h3>
+                  <a href="https://developer1012.hashnode.dev/exploring-the-power-of-react-js-benefits-features-and-use-cases#heading-declarative-approach" class="btn2">Read More</a>
+                </div>
+              </div>
+              <div class="blog-post">
+                <img src="images/bb.avif" alt="Blog Post Image">
+                <div class="blog-info">
+                  <h3 class="blog-title">MongoDB Commands Simplified: The Only Cheat Sheet You'll Ever Need</h3>
+                  <a href="https://developer1012.hashnode.dev/mongodb-commands-simplified-the-only-cheat-sheet-youll-ever-need" class="btn2">Read More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>  
+        <a href="https://hashnode.com/@SurajPratap10" class="btn">See more</a>
+
+
+
+
+
+
 
         <!-- TESTIMONIAL -->
         <br>
@@ -479,8 +548,8 @@
         <br>
         <br>
         <div id="testimonials"></div>
+
         <h1 class = "title">Testimonials</h1><br>
-        
         <section class="pn_reviews my-5">
                   <div class="col-md-12 col-lg-4">
                       <div class="pn_testimonial_box mt-4">
@@ -521,14 +590,16 @@
                   </div>
               </div>
           </div>
-      </section>
+      </section> 
 
 
+
+
+      
 <!-----------------CONTACT------------------>
 
     <div id="contact">
         <div class="container">
-            
             <div class="row">
                 <div class="contact-left">
                     <h1 class="title">Contact Me</h1>
@@ -559,12 +630,6 @@
                 </div>
             </div>
         </div>
-        
-      <!-- <div class="up-arrow-container">
-        <button id="up-arrow-btn">
-          <i class="fas fa-arrow-up"></i>
-        </button>
-      </div> -->
 
       <div class="up-arrow-container">
         <button id="up-arrow-btn" aria-label="Back to top">
