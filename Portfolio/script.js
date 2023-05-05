@@ -67,57 +67,63 @@
 
 
 //Autotype JS code:
+const dataset = ["Suraj Pratap..."];
+let datasetIndex = 0;
+let outputElement;
+const pause = 1000;
+const addTime = 150; // slower typing animation
+const removeTime = 100; // slower removing animation
+let letterIndex = 0;
+let currentInterval;
 
-var dataset = [" Suraj " + "  Pratap... "];
-var datasetIndex = 0;
-var data;
-var pause = 1000;
-var addTime = 200;
-var removeTime = 150;
-var letterIndex = 0;
-var currentInterval;
-
-var autoType = document.getElementById("autoType");
+function init() {
+  outputElement = document.getElementById("autoType");
+  textRotation();
+}
 
 function textRotation() {
-  if(datasetIndex == dataset.length) {
+  if (datasetIndex === dataset.length) {
     datasetIndex = 0;
-  };
-  
-  data = dataset[datasetIndex];
+  }
+  const data = dataset[datasetIndex];
   letterIndex = 0;
-  autoType.className = "";
-  currentInterval = window.setInterval(addLetter, addTime);
-};
+  outputElement.className = "";
+  currentInterval = setInterval(addLetter, addTime);
+}
 
 function addLetter() {
-  autoType.innerHTML += data.charAt(letterIndex);
+  outputElement.innerHTML += dataset[datasetIndex].charAt(letterIndex);
   letterIndex += 1;
-  
-  if(letterIndex > data.length) {
-    autoType.className = "createAnimation";
-    window.clearInterval(currentInterval);
-    window.setTimeout(startRemove, pause);
-  };
-};
+
+  if (letterIndex > dataset[datasetIndex].length) {
+    outputElement.className = "createAnimation";
+    clearInterval(currentInterval);
+    setTimeout(startRemove, pause);
+  }
+}
 
 function startRemove() {
-  currentInterval = window.setInterval(removeLetter, removeTime);
+  currentInterval = setInterval(removeLetter, removeTime);
 }
 
 function removeLetter() {
-  var currentString = autoType.innerHTML;
-  autoType.innerHTML = currentString.slice(0, -1);
-  
-  if(currentString.length < 1) {
-    window.clearInterval(currentInterval);
+  const currentString = outputElement.innerHTML;
+  const newString = currentString.substring(0, currentString.length - 1);
+  outputElement.innerHTML = newString;
+
+  if (currentString.length < 1) {
+    clearInterval(currentInterval);
     datasetIndex += 1;
     textRotation();
-  };
-};
+  } else {
+    if (newString.length < 1) {
+      clearInterval(currentInterval);
+      setTimeout(startRemove, pause);
+    }
+  }
+}
 
-window.onload = window.setTimeout(textRotation, 500);
-
+setTimeout(init, pause); // set the delay to pause instead
 
 
 
@@ -191,3 +197,17 @@ arrowBtn.addEventListener("click", function () {
   }, 2000);
   scrollToTop();
 });
+
+
+const arrow = document.querySelector('.arrow');
+
+arrow.addEventListener('click', () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    left: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+
