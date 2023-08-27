@@ -1,5 +1,5 @@
 # Portfolio Website
-Know me better :)
+This is my personal Portfolio Website which demonstrates my skills and potential.   
  
 ## Technologies Used:
 
