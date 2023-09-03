@@ -1,5 +1,6 @@
 # Portfolio Website
-This is my personal Portfolio Website which demonstrates my skills and potential.   
+I am a passionate developer with a strong dedication to learn new things.Through this website, you can learn more about my background, experiences, and interests. 
+ 
  
 ## Technologies Used:
 
