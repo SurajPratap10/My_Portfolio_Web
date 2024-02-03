@@ -6,13 +6,10 @@
     box-sizing: border-box;
 }
 
-
-
 /*-----Scrolls website to desired MENU-----*/
 html{
     scroll-behavior: smooth;
 }
-
 body{
 
     /* background: #080008; */
@@ -20,9 +17,7 @@ body{
     background-color: #080008;
 	margin: 0;
 	transition: all 0.2s linear;
-  
 }
-
 #header{
 
     width: 100%;
@@ -36,7 +31,6 @@ body{
 
     padding: 10px 10%;
 }
-
 nav{
 
     display: flex;
