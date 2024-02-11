@@ -9,7 +9,7 @@ b) CSS <br>
 c) Javascript <br>
 d) Netlify <br>
 
-## Demo:
+## MockUp:
 <p align="center">
   <img src="Portfolio/images/w3.png"/>
 </p>
