@@ -6,6 +6,43 @@
     box-sizing: border-box;
 }
 
+/* Smooth scrolling and enhanced transitions */
+:root {
+    --primary-color: #ff004f;
+    --secondary-color: #262626;
+    --text-color: #fff;
+    --transition-speed: 0.3s;
+}
+
+/* Custom cursor */
+body {
+    cursor: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+.cursor-follower {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.2s ease;
+    opacity: 0.5;
+}
+
 /*-----Scrolls website to desired MENU-----*/
 html{
     scroll-behavior: smooth;
@@ -17,7 +54,35 @@ body{
     background-color: #080008;
 	margin: 0;
 	transition: all 0.2s linear;
+    overflow-x: hidden;
 }
+
+/* Page loader animation */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #080008;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.loader-text {
+    font-size: 2rem;
+    color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
 #header{
 
     width: 100%;
@@ -25,6 +90,45 @@ body{
     background-image: url(images/Quotes\ Today\ \(1\).png);
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating particles animation */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: float 6s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 .container{
@@ -37,11 +141,25 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
+}
+
+/* Navbar scroll effect */
+nav.scrolled {
+    background: rgba(8, 0, 8, 0.95);
+    padding: 5px 10%;
+    box-shadow: 0 2px 20px rgba(255, 0, 79, 0.1);
 }
 
 .logoe{
 
     width: 180px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.logoe:hover {
+    transform: scale(1.05);
 }
 .logo {
   display: inline-block;
@@ -54,6 +172,7 @@ nav{
   margin-top: 25px;
   margin-left: 25px;
   border: 2px solid white; /* White border */
+  transition: all var(--transition-speed) ease;
 
 }
 
@@ -80,6 +199,7 @@ nav{
 
 .logo:hover {
   transform: scale(1.2); /* Scale on hover */
+  box-shadow: 0 0 20px var(--primary-color);
 }
 
 .logo span {
@@ -98,7 +218,13 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    transform: translateY(0);
+    transition: transform var(--transition-speed) ease;
 
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
 }
 
 nav ul li a{
@@ -107,6 +233,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    transition: color var(--transition-speed) ease;
 }
 
 nav ul li a::after{
@@ -126,24 +253,53 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
 .header-text{
 
     margin-top: 20%;
     font-size: 30px;
+    animation: fadeInUp 1s ease;
    
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    animation: fadeInUp 1s ease 0.3s both;
 }
 .header-text h1 span{
     color: #ff004f;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px var(--primary-color);
+    }
+    to {
+        text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    }
 }
 
 .new h1{
     font-size: 40px;
     margin-top: 20px;
+    animation: fadeInUp 1s ease 0.6s both;
     
 }
 
@@ -155,6 +311,19 @@ nav ul li a:hover::after{
 
     padding: 80px 0;
     color: #ffffff;
+    position: relative;
+}
+
+/* Section reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .row{
@@ -165,16 +334,48 @@ nav ul li a:hover::after{
 
 .about-column-1{
     flex-basis: 35%;
+    animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .about-column-1 img{
     width: 100%;
     border-radius: 15px;
+    transition: all var(--transition-speed) ease;
+    filter: grayscale(0.3);
+}
+
+.about-column-1 img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+    box-shadow: 0 10px 30px rgba(255, 0, 79, 0.3);
 }
 
 
 .about-column-2{
     flex-basis: 60%;
+    animation: slideInRight 1s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .title{
@@ -182,6 +383,25 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: #fff;
     margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    animation: titleUnderline 2s ease forwards;
+}
+
+@keyframes titleUnderline {
+    to {
+        width: 100%;
+    }
 }
 
 .tab-titles{
@@ -195,7 +415,14 @@ nav ul li a:hover::after{
     font-weight: 600;
     cursor: pointer;
     position: relative;
+    transition: all var(--transition-speed) ease;
+    padding: 10px 0;
 
+}
+
+.tab-links:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .tab-links::after{
@@ -216,6 +443,22 @@ nav ul li a:hover::after{
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;  
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInContent 0.5s ease forwards;
+}
+
+.tab-contents ul li:nth-child(1) { animation-delay: 0.1s; }
+.tab-contents ul li:nth-child(2) { animation-delay: 0.2s; }
+.tab-contents ul li:nth-child(3) { animation-delay: 0.3s; }
+.tab-contents ul li:nth-child(4) { animation-delay: 0.4s; }
+.tab-contents ul li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInContent {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .tab-contents ul li span{
     color: #ff004f;
@@ -255,12 +498,37 @@ nav ul li a:hover::after{
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.services-list div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 79, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.services-list div:hover::before {
+    left: 100%;
 }
 
 .services-list div i{
 
     font-size: 60px;
     margin-bottom: 30px;
+    transition: all var(--transition-speed) ease;
+    display: inline-block;
+}
+
+.services-list div:hover i {
+    transform: rotateY(360deg);
+    color: var(--primary-color);
 }
 
 .services-list div h2{
@@ -268,6 +536,11 @@ nav ul li a:hover::after{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    transition: color var(--transition-speed) ease;
+}
+
+.services-list div:hover h2 {
+    color: #fff;
 }
 
 .services-list div a{
@@ -277,12 +550,26 @@ nav ul li a:hover::after{
     font-size: 14px;
     margin-top: 20px;
     display: inline-block;
+    position: relative;
+    transition: all var(--transition-speed) ease;
+}
+
+.services-list div a::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.services-list div:hover a::after {
+    transform: translateX(5px);
 }
 
 .services-list div:hover{
 
     background: #ff004f;
     transform: translateY(-30px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(255, 0, 79, 0.3);
 }
 
 
@@ -307,6 +594,13 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transform: translateY(0);
+    transition: all var(--transition-speed) ease;
+}
+
+.work:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -344,6 +638,21 @@ nav ul li a:hover::after{
 
     font-weight: 500;
     margin-bottom: 20px;
+    transform: translateY(20px);
+    transition: transform 0.5s ease 0.2s;
+}
+
+.work:hover .layer h3 {
+    transform: translateY(0);
+}
+
+.layer p {
+    transform: translateY(20px);
+    transition: transform 0.5s ease 0.3s;
+}
+
+.work:hover .layer p {
+    transform: translateY(0);
 }
 
 .layer a{
@@ -358,6 +667,18 @@ nav ul li a:hover::after{
     height: 60px;
     width: 60px;
     border-radius: 50%;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.5s ease 0.4s;
+}
+
+.work:hover .layer a {
+    transform: translateY(0) scale(1);
+}
+
+.layer a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(0) scale(1.1);
 }
 
 .work:hover img{
@@ -383,10 +704,30 @@ nav ul li a:hover::after{
     text-decoration: none;
     transform: background 0.5s;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: left 0.3s ease;
+    z-index: -1;
 }
 
 .btn:hover{
     background: #ff004f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.4);
+}
+
+.btn:hover::before {
+    left: 0;
 }
 
 /*-----------CONTACT-----------*/
@@ -425,12 +766,33 @@ nav ul li a:hover::after{
     color: #ffffff;
     display: inline-block;
     transition: transform 0.5s;
+    position: relative;
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.social-icons a:hover::before {
+    width: 50px;
+    height: 50px;
 }
 
 .social-icons a:hover{
 
     color: #ff004f;
     transform: translateY(-5px);
+    color: white;
 }
 
 .btn.btn1{
@@ -452,6 +814,14 @@ form input, form textarea{
     color: #ff004f;
     font-size: 18px;
     border-radius: 6px;
+    transition: all var(--transition-speed) ease;
+    border: 1px solid transparent;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 0, 79, 0.3);
+    transform: translateY(-2px);
 }
 
 form btn1{
@@ -470,6 +840,12 @@ form btn1{
   
   #autoType {
     border-right: 2px solid #fff;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% { border-color: #fff; }
+    51%, 100% { border-color: transparent; }
   }
   
   .caretAnimation {
@@ -957,6 +1333,7 @@ body.dark {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    transform: scale(0.8);
   }
   
   .timeline ul li:nth-child(odd) div {
@@ -971,6 +1348,7 @@ body.dark {
     transform: none;
     visibility: visible;
     opacity: 1;
+    transform: scale(1);
   }
   
   
@@ -1075,6 +1453,15 @@ body.dark {
     -moz-border-radius: 4rem;
     -ms-border-radius: 4rem;
     border-radius: 1rem;
+    opacity: 0;
+    animation: fadeInScale 0.8s ease forwards;
+  }
+  
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(0.9);
+    }
   }
   .pn_testimonial_box:hover {
     box-shadow: 2px 2px 6px #ff004f;
@@ -1082,6 +1469,7 @@ body.dark {
     transform: scale(1);
     position: relative;
     z-index: 1;
+    background: linear-gradient(135deg, #262626, #333);
   }
   .pn_review_rating img {
     width: 20%;
@@ -1278,17 +1666,24 @@ h5{
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  transform: translateY(0);
 }
 
 .blog-post:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  transform: translateY(-10px) scale(1.02);
 }
 
 .blog-post img {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover img {
+  transform: scale(1.1);
 }
 
 .blog-info {
@@ -1305,6 +1700,11 @@ h5{
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-post:hover .blog-title {
+  color: var(--primary-color);
 }
 
 .blog-excerpt {
@@ -1323,11 +1723,30 @@ h5{
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: -1;
 }
 
 .btn2:hover {
   background-color: #ff004f;
   color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn2:hover::before {
+  left: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1351,7 +1770,3 @@ h5{
     font-size: 14px;
   }
 }
-
-
-
-
